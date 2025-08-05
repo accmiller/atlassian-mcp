@@ -1,8 +1,12 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const port = 3000;
 
 app.use(express.json());
+
+// 👉 Serve .well-known/ai-plugin.json
+app.use('/.well-known', express.static(path.join(__dirname, '.well-known')));
 
 // Root check (optional)
 app.get('/', (req, res) => {
