@@ -9,7 +9,7 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://atlassian-mcp.onrender.com/openapi.yaml"
+    "url": "https://amber-mcp.onrender.com/openapi.yaml"
   },
   "logo_url": "https://atlassian.com/favicon.ico",
   "contact_email": "your-email@example.com",
