@@ -1,0 +1,41 @@
+openapi: 3.0.1
+info:
+  title: Atlassian MCP Plugin
+  description: Search Atlassian content (Jira/Confluence) using MCP.
+  version: '1.0.0'
+paths:
+  /actions/search:
+    post:
+      operationId: searchAtlassian
+      summary: Search Jira and Confluence content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: string
+                  description: The search query
+      responses:
+        '200':
+          description: A list of search results
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        title:
+                          type: string
+                        url:
+                          type: string
+                        snippet:
+                          type: string
